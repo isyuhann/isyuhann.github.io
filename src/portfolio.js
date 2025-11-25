@@ -257,8 +257,9 @@ const achievementSection = {
         }
       ]
     }
-  ]
-}
+  ],
+  display: true
+};
 
 // Resume Section
 /* const resumeSection = {
