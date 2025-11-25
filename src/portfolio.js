@@ -129,7 +129,7 @@ const Experiences = {
     {
       role: "Volunteer / Marketing PM",
       company: "Google Developer Groups (GDG) Taipei",
-      companylogo: require("./assets/images/google_logo.png"), // 記得放圖，或暫用 ntpulogo.png
+      companylogo: require("./assets/images/gdg_logo.png"),
       date: "Nov 2024 – Present",
       desc: "Active contributor to the largest developer community in Taipei.",
       descBullets: [
@@ -153,7 +153,7 @@ const Experiences = {
     {
       role: "Administrative Assistant",
       company: "Kinmen County Government (Social Affairs)",
-      companylogo: require("./assets/images/kinmen_logo.png"), // 記得放圖
+      companylogo: require("./assets/images/kinmen_logo.jpg"),
       date: "Jul 2023 – Sep 2023",
       desc: "Summer internship assisting the Social Welfare Section.",
       descBullets: [
