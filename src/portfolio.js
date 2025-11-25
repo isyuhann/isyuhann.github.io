@@ -191,8 +191,8 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/avatar.jpg"), // 請確保檔案已放入 src/assets/images/
-      projectName: "股往今 LINE (Stock Bot)",
+      image: require("./assets/images/avatar.jpg"),
+      projectName: "Stock Bot (股往今 LINE)",
       projectDesc: "Integrated Gemini via LINE Bot for real-time stock queries, trend charting, and news summarization.",
       footerLink: [
         {
