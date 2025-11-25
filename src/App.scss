@@ -28,3 +28,22 @@
 .subTitle {
   color: $subTitle;
 }
+/* --- Custom Overrides --- */
+
+/* 1. 強制取消 Achievements 副標題的全大寫樣式 */
+.achievement-card-subtitle, 
+.subTitle { 
+  text-transform: none !important; 
+}
+
+/* 2. (選用) 針對無效連結的按鈕，移除「手指」游標 */
+/* 這會讓連結為 javascript:void(0); 的按鈕，滑鼠移上去時顯示為普通箭頭 */
+a[href="javascript:void(0);"] {
+  cursor: default !important;
+  opacity: 0.8; /* 稍微讓它看起來不像一般按鈕那麼亮 */
+  
+  &:hover {
+    transform: none !important; /* 取消浮動動畫 */
+    box-shadow: none !important; /* 取消陰影效果 */
+  }
+}

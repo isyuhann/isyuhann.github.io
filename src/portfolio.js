@@ -192,12 +192,12 @@ const bigProjects = {
     },
     {
       image: require("./assets/images/avatar.jpg"),
-      projectName: "Stock Bot (股往今 LINE)",
+      projectName: "股往今 LINE (Stock Bot)",
       projectDesc: "Integrated Gemini via LINE Bot for real-time stock queries, trend charting, and news summarization.",
       footerLink: [
         {
-          name: "View Demo",
-          url: "#" // 如果有 Demo 影片或 Repo 連結可以填在這裡
+          name: "Add Friend",
+          url: "https://lin.ee/ik8EWnM"
         }
       ]
     },
@@ -213,17 +213,13 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/logo_thumbnail.png"), // 請確保檔案已放入 src/assets/images/
+      image: require("./assets/images/logo_thumbnail.png"),
       projectName: "PlantMe",
       projectDesc: "A gamified virtual eco-plant service built with Vibe Coding. Grow virtual plants by completing real-world eco-tasks. No login required.",
       footerLink: [
         {
           name: "Visit Website",
           url: "https://plantme-seven.vercel.app/"
-        },
-        {
-          name: "GitHub",
-          url: "https://github.com/isyuhann/PlantMe" // 假設你有這個 repo，沒有的話可以拿掉這個區塊
         }
       ]
     }
@@ -242,7 +238,7 @@ const achievementSection = {
     {
       title: "AWS Certified AI Practitioner",
       subtitle: "Issued by Amazon Web Services (AWS) | Oct 2025 - Oct 2028",
-      image: require("./assets/images/aws_logo.png"), // ⚠️ 請下載 AWS Logo 並命名為 aws_logo.png 放入資料夾
+      image: require("./assets/images/aws_logo.png"),
       footerLink: [
         {
           name: "Verify Credential",
@@ -253,17 +249,16 @@ const achievementSection = {
     {
       title: "Building LLM Applications With Prompt Engineering",
       subtitle: "Issued by NVIDIA | Nov 2025",
-      image: require("./assets/images/nvidia_logo.png"), // ⚠️ 請下載 NVIDIA Logo 並命名為 nvidia_logo.png 放入資料夾
+      image: require("./assets/images/nvidia_logo.png"),
       footerLink: [
         {
           name: "Credential ID: ebkxvwUVS1yCI9NbnhWzRw",
-          url: "#" // 如果有查核網址可以填入，沒有的話填 #
+          url: "javascript:void(0);" 
         }
       ]
     }
-  ],
-  display: true
-};
+  ]
+}
 
 // Resume Section
 /* const resumeSection = {
