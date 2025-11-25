@@ -1,1 +1,1 @@
-{"data":{"user":{"name":"YuHan Huang","bio":"A student who have infinite passion in technology field.\r\n\r\nNow dedicating as LEAD in Google Developer Groups on Campus NTPU.","avatarUrl":"https://avatars.githubusercontent.com/u/184199027?u=df7811de6cccb38d1d433556f6d13f884f280965&v=4","location":"Taiwan, Sanxia District","pinnedItems":{"totalCount":0,"edges":[]}}}}
+{"data":{"user":null},"errors":[{"type":"NOT_FOUND","path":["user"],"locations":[{"line":3,"column":3}],"message":"Could not resolve to a User with the login of 'yuhanhuang0211'."}]}
