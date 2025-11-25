@@ -47,3 +47,23 @@ a[href="javascript:void(0);"] {
     box-shadow: none !important; /* 取消陰影效果 */
   }
 }
+
+/* --- Experiences Section Fixes --- */
+
+/* 修正組織名稱 (Company Name) 被截斷的問題 */
+.experience-card-company {
+  white-space: normal !important;  /* 強制允許換行 */
+  overflow: visible !important;    /* 讓內容完整顯示，不要隱藏 */
+  text-overflow: unset !important; /* 移除結尾的省略號 (...) */
+  font-size: 1.1rem !important;    /* 縮小字體 (原本通常為 h5 大小) */
+  line-height: 1.3 !important;     /* 設定行高，讓換行後的文字不會擠在一起 */
+  height: auto !important;         /* 讓高度自動調整，以免字換行後被卡住 */
+  margin-top: 5px !important;      /* 稍微調整與職稱的間距 */
+}
+
+/* 針對手機版再稍微縮小一點，確保排版好看 */
+@media (max-width: 768px) {
+  .experience-card-company {
+    font-size: 1rem !important;
+  }
+}
