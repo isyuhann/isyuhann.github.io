@@ -70,31 +70,31 @@ https://fontawesome.com/icons?d=gallery */
 // Education Section
 
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: true,
   schools: [
+    {
+      schoolName: "National Taipei University",
+      logo: require("./assets/images/ntpulogo.png"),
+      subHeader: "Bachelor of Accounting",
+      duration: "September 2023 - Present",
+      desc: "Focusing on the intersection of Technology, Marketing, and Business. Active in entrepreneurship competitions.",
+      descBullets: [
+        "GDG on Campus NTPU - Co-Lead (Present): Leading a core team of 20 members, organizing events with 60+ avg attendees. Total community participation reached 6,600+.",
+        "GDG on Campus NTPU - Marketing Core (Past): Managed brand promotion and social media, driving 258% follower growth.",
+        "Ranked high in academic performance during the first year."
+      ]
+    },
     {
       schoolName: "Kinmen Senior High School",
       logo: require("./assets/images/kmshlogo.png"),
       subHeader: "General Stream",
       duration: "September 2020 - June 2023",
-      desc: "Participated in many competitions and activities, winning some tities.",
+      desc: "Active in scientific research and extracurricular activities.",
       descBullets: [
-        "NASA GLOBE Program - Meteorological Observer Volunteer",
-        "NASA GLOBE Program - International Virtual Science Symposium (IVSS)｜Full-stared in biology field research",
-        "NASA GLOBE Program - 2021 GLOBE Asia and Pacific Regional Meeting & Regional GLE｜Distinguished guest speaker",
-        "Photography Club - Activity Officer",
-        "Biology Research Club - Treasurer & Vice President",
-      ]
-    },
-    {
-      schoolName: "National Taipei University",
-      logo: require("./assets/images/ntpulogo.png"),
-      subHeader: "Bachelor of Accounting",
-      duration: "September 2023 - Now",
-      desc: "Ranked high in the first year, still being in love with competitions and activities.",
-      descBullets: [
-        "Google Developer Groups on Campus NTPU - Core Team Member (Marketing)",
-        "Google Developer Groups on Campus NTPU - Lead",
+        "NASA GLOBE Program: Represented Taiwan at the Asia-Pacific Regional Meeting as a distinguished guest speaker.",
+        "NASA GLOBE Program IVSS: Achieved full score in biology field research.",
+        "Photography Club: Activity Officer (Helped the club become the 3rd largest in school).",
+        "Biology Research Club: Treasurer & Vice President."
       ]
     }
   ]
@@ -124,8 +124,45 @@ const techStack = {
 // Experience section
 
 const Experiences = {
-  display: false, //Set it to true to show Experiences Section
-  experience: []
+  display: true,
+  experience: [
+    {
+      role: "Volunteer / Marketing PM",
+      company: "Google Developer Groups (GDG) Taipei",
+      companylogo: require("./assets/images/google_logo.png"), // 記得放圖，或暫用 ntpulogo.png
+      date: "Nov 2024 – Present",
+      desc: "Active contributor to the largest developer community in Taipei.",
+      descBullets: [
+        "DevFest Taipei 2024: Served as Marketing PM. Managed promotion schedule, copywriting, and social media ads, contributing to 1,029 registrations.",
+        "DevFest Taipei 2025: Currently serving as Marketing Lead, overseeing the marketing framework and team coordination.",
+        "Gained practical experience in digital marketing and connected with industry professionals."
+      ]
+    },
+    {
+      role: "Administrative Assistant",
+      company: "National Taipei University (Student Affairs)",
+      companylogo: require("./assets/images/ntpulogo.png"),
+      date: "Feb 2024 – Present",
+      desc: "Assisting the Student Housing Service Division with administrative operations.",
+      descBullets: [
+        "Handled document submission, inquiry responses, and event support.",
+        "Executed data digitization and managed office correspondence (phone/mail).",
+        "Maintained office environment and supported ad-hoc administrative tasks."
+      ]
+    },
+    {
+      role: "Administrative Assistant",
+      company: "Kinmen County Government (Social Affairs)",
+      companylogo: require("./assets/images/kinmen_logo.png"), // 記得放圖
+      date: "Jul 2023 – Sep 2023",
+      desc: "Summer internship assisting the Social Welfare Section.",
+      descBullets: [
+        "Assisted with official document dispatch, filing, and mail handling.",
+        "Served as a contact window for external inquiries.",
+        "Supported general office administration and environment maintenance."
+      ]
+    }
+  ]
 };
 
 /* Your Open Source Section to View Your Github Pinned Projects
