@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.b9239a1e.css",
+    "main.css": "/static/css/main.51c656e1.css",
     "main.js": "/static/js/main.a9c250e1.js",
     "static/css/769.548803da.chunk.css": "/static/css/769.548803da.chunk.css",
     "static/js/769.bdc0e258.chunk.js": "/static/js/769.bdc0e258.chunk.js",
@@ -23,13 +23,13 @@
     "static/media/kinmen_logo.jpg": "/static/media/kinmen_logo.f3b39f9f4f3605c476d4.jpg",
     "static/media/skill.svg": "/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
     "index.html": "/index.html",
-    "main.b9239a1e.css.map": "/static/css/main.b9239a1e.css.map",
+    "main.51c656e1.css.map": "/static/css/main.51c656e1.css.map",
     "main.a9c250e1.js.map": "/static/js/main.a9c250e1.js.map",
     "769.548803da.chunk.css.map": "/static/css/769.548803da.chunk.css.map",
     "769.bdc0e258.chunk.js.map": "/static/js/769.bdc0e258.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9239a1e.css",
+    "static/css/main.51c656e1.css",
     "static/js/main.a9c250e1.js"
   ]
 }
