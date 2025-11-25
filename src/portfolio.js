@@ -35,12 +35,10 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/yuhanhuang0211",
+  github: "https://github.com/isyuhann", // 已更新為 isyuhann
   linkedin: "https://www.linkedin.com/in/%E9%9B%A8%E6%B6%B5-%E9%BB%83-4a58a42a6/",
   gmail: "isyuhann@gmail.com",
-  // Instagram, Facebook, Gitlab and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
-  display: true // Set true to display this section, defaults to false
+  display: true
 };
 
 // Skills Section
@@ -151,24 +149,49 @@ const bigProjects = {
       footerLink: [
         {
           name: "Under Development",
-        //  url: "http://saayahealth.com/"
+          // url: "" 
         }
-        //  you can add extra buttons here.
+      ]
+    },
+    {
+      image: require("./assets/images/avatar.jpg"), // 請確保檔案已放入 src/assets/images/
+      projectName: "股往今 LINE (Stock Bot)",
+      projectDesc: "Integrated Gemini via LINE Bot for real-time stock queries, trend charting, and news summarization.",
+      footerLink: [
+        {
+          name: "View Demo",
+          url: "#" // 如果有 Demo 影片或 Repo 連結可以填在這裡
+        }
       ]
     },
     {
       image: require("./assets/images/AICUP.png"),
-      projectName: "AI CUP",
-      projectDesc: "Serving as a Research Assistant in NTPU-MIS iFit Lab, helping the Ministry of Education in labeling AI training datasets for the AI CUP 2025 Competition.",
+      projectName: "AI Cup - ESG Promise Verification Competition",
+      projectDesc: "Serving as a Research Assistant in NTPU-MIS iFit Lab. Assisted in labeling AI training datasets for the AI CUP 2025 Competition.",
       footerLink: [
         {
           name: "Compete Now",
           url: "https://www.aicup.tw/"
         }
       ]
+    },
+    {
+      image: require("./assets/images/logo_thumbnail.png"), // 請確保檔案已放入 src/assets/images/
+      projectName: "PlantMe",
+      projectDesc: "A gamified virtual eco-plant service built with Vibe Coding. Grow virtual plants by completing real-world eco-tasks. No login required.",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "https://plantme-seven.vercel.app/"
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/isyuhann/PlantMe" // 假設你有這個 repo，沒有的話可以拿掉這個區塊
+        }
+      ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Achievement Section
@@ -178,8 +201,31 @@ const achievementSection = {
   title: emoji("Achievements And Certifications 🏆 "),
   subtitle:
     "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
-  achievementsCards: [],
-  display: false // Set false to hide this section, defaults to true
+  achievementsCards: [
+    {
+      title: "AWS Certified AI Practitioner",
+      subtitle: "Issued by Amazon Web Services (AWS) | Oct 2025 - Oct 2028",
+      image: require("./assets/images/aws_logo.png"), // ⚠️ 請下載 AWS Logo 並命名為 aws_logo.png 放入資料夾
+      footerLink: [
+        {
+          name: "Verify Credential",
+          url: "https://cp.certmetrics.com/amazon/en/public/verify/credential/a35ffd9de29043eaa12837cb9208baf7"
+        }
+      ]
+    },
+    {
+      title: "Building LLM Applications With Prompt Engineering",
+      subtitle: "Issued by NVIDIA | Nov 2025",
+      image: require("./assets/images/nvidia_logo.png"), // ⚠️ 請下載 NVIDIA Logo 並命名為 nvidia_logo.png 放入資料夾
+      footerLink: [
+        {
+          name: "Credential ID: ebkxvwUVS1yCI9NbnhWzRw",
+          url: "#" // 如果有查核網址可以填入，沒有的話填 #
+        }
+      ]
+    }
+  ],
+  display: true
 };
 
 // Resume Section
