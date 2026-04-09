@@ -1,50 +1,175 @@
+/* src/index.css */
+
 @font-face {
-  font-family: "Google Sans Display";
-  src: url("./assets/fonts/GoogleSansDisplay-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Google Sans Display";
-  src: url("./assets/fonts/GoogleSansDisplay-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+  font-family: 'Broadway';
+  src: url('./assets/fonts/Broadway.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Agustina Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Agustina Regular"),
-    url("./assets/fonts/Agustina.woff") format("woff");
-  font-display: swap;
+  font-family: 'RageItalic';
+  src: url('./assets/fonts/RageItalic.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat"),
-    url("./assets/fonts/Montserrat-Regular.ttf") format("woff");
-  font-display: swap;
+  font-family: 'GenseiRounded';
+  src: url('./assets/fonts/GenseiRounded-L.ttf') format('truetype');
+  font-weight: 300; /* Light */
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@font-face {
+  font-family: 'GenseiRounded';
+  src: url('./assets/fonts/GenseiRounded-B.ttf') format('truetype');
+  font-weight: 700; /* Bold */
 }
-html,
-body {
-  scroll-behavior: smooth;
+@font-face {
+  font-family: 'MagicR';
+  src: url('./assets/fonts/MagicR.ttf') format('truetype');
 }
-body {
+
+:root {
+  --primary-yellow: #F4B642;
+  --ppt-width: 50.8;
+  --ppt-height: 28.579;
+}
+
+/* 建立一個比例穩定的容器 */
+.about-canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 50.8 / 28.579; /* 鎖定 PPT 比例 */
+  background-color: #ffffff;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* 絕對定位輔助類別 */
+.absolute-element {
+  position: absolute;
+  transform-origin: top left;
+}
+
+* {
   margin: 0;
-  font: 19px / 23px "Google Sans Display", Montserrat, "Montserrat", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* Media Query */
-@media (max-width: 1380px) {
-  html,
-  body {
-    font-size: rem;
-    line-height: normal;
+
+:root {
+  /* 根據你的 PPT 設計更新的色票 */
+  --bg-beige: #ffffff;       /* 背景改為純白，以凸顯黃色區塊 */
+  --primary-yellow: #F4B642; /* PPT 裡的芥末黃/向日葵黃 */
+  --text-main: #000000;      /* 內文深黑色 */
+  --text-gray: #666666;      /* 輔助灰色 */
+}
+
+body {
+  background-color: var(--bg-beige);
+  color: var(--text-main);
+  font-family: 'Helvetica Neue', Arial, sans-serif; 
+}
+
+/* 雜誌標題風 (Get to know me...) */
+.title-black-italic {
+  font-size: 3.5rem;
+  font-weight: 900;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  line-height: 1.1;
+}
+
+/* 簽名字體風 (YuHan Huang) */
+.signature-text {
+  font-size: 2.5rem;
+  color: var(--primary-yellow);
+  font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+  margin-top: -10px;
+  margin-left: 80px;
+}
+
+/* 右上方黃色小標籤 */
+.pill-tag {
+  background-color: var(--primary-yellow);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* 每個小節的粗黑底線 */
+.section-header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Back to Top Button (Sticker Style 貼紙風) */
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;                 /* 白色背景 */
+  color: #333;                            /* 黑色箭頭 */
+  border: 3px solid #333;                 /* 黑框 */
+  border-radius: 50%;                       /* 圓形 */
+  box-shadow: 4px 4px 0px rgba(0,0,0,1);  /* 硬黑陰影，超有漫畫感！ */
+  cursor: pointer;
+  z-index: 1000;                            /* 確保在最上層 */
+  
+  /* 預設隱藏與彈性過渡動畫 */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+  
+  /* 讓箭頭置中 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 顯示狀態 */
+#backToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover 效果：浮起 + 背景變鵝黃色 */
+#backToTopBtn:hover {
+  transform: translateY(-5px); 
+  box-shadow: 6px 6px 0px rgba(0,0,0,1);
+  background-color: var(--primary-yellow, #F4B642); /* 幫你改成你剛剛的主題黃色！ */
+}
+
+/* 點擊效果：按下去的真實回饋感 */
+#backToTopBtn:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 0px rgba(0,0,0,1);
+}
+
+/* 手機版縮小一點點 */
+@media (max-width: 768px) {
+  #backToTopBtn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
   }
+}
+
+/* 通用的連結互動類別 */
+.link-hover-effect {
+  transition: all 0.3s ease;
+  display: inline-block; /* 確保 transform 生效 */
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-hover-effect:hover {
+  color: var(--primary-yellow) !important;
+  transform: translateY(-3px);
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
 }
