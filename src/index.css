@@ -1,26 +1,44 @@
 /* src/index.css */
 
+/* ===================================
+   自訂字體引入 (Font Faces)
+   =================================== */
+
 @font-face {
   font-family: 'Broadway';
   src: url('./assets/fonts/Broadway.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'RageItalic';
-  src: url('./assets/fonts/RageItalic.ttf') format('truetype');
+  /* 注意：這裡直接對應你實際的檔名，包含空白 */
+  src: url('./assets/fonts/Rage Italic.ttf') format('truetype');
 }
-@font-face {
-  font-family: 'GenseiRounded';
-  src: url('./assets/fonts/GenseiRounded-L.ttf') format('truetype');
-  font-weight: 300; /* Light */
-}
-@font-face {
-  font-family: 'GenseiRounded';
-  src: url('./assets/fonts/GenseiRounded-B.ttf') format('truetype');
-  font-weight: 700; /* Bold */
-}
+
 @font-face {
   font-family: 'MagicR';
-  src: url('./assets/fonts/MagicR.ttf') format('truetype');
+  /* 注意：這裡直接對應你實際的檔名，包含空白 */
+  src: url('./assets/fonts/Magic R Regular.ttf') format('truetype');
+}
+
+/* --- 源泉圓體家族 (GenseiRounded)，格式為 .otf (opentype) --- */
+
+@font-face {
+  font-family: 'GenseiRounded';
+  src: url('./assets/fonts/GenseiRounded-L.otf') format('opentype');
+  font-weight: 300; /* Light (對應 L) */
+}
+
+@font-face {
+  font-family: 'GenseiRounded';
+  src: url('./assets/fonts/GenseiRounded-R.otf') format('opentype');
+  font-weight: 400; /* Regular (對應 R) */
+}
+
+@font-face {
+  font-family: 'GenseiRounded';
+  src: url('./assets/fonts/GenseiRounded-B.otf') format('opentype');
+  font-weight: 700; /* Bold (對應 B) */
 }
 
 :root {
@@ -102,7 +120,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Back to Top Button (Sticker Style 貼紙風) */
+/* Back to Top Button */
 
 #backToTopBtn {
   position: fixed;
@@ -114,7 +132,7 @@ body {
   color: #333;                            /* 黑色箭頭 */
   border: 3px solid #333;                 /* 黑框 */
   border-radius: 50%;                       /* 圓形 */
-  box-shadow: 4px 4px 0px rgba(0,0,0,1);  /* 硬黑陰影，超有漫畫感！ */
+  box-shadow: 4px 4px 0px rgba(0,0,0,1);  /* 硬黑陰影 */
   cursor: pointer;
   z-index: 1000;                            /* 確保在最上層 */
   
@@ -172,4 +190,11 @@ body {
   color: var(--primary-yellow) !important;
   transform: translateY(-3px);
   text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+/* 網頁平滑滾動 */
+html {
+  scroll-behavior: smooth;
+  /* 預留導覽列的高度，避免滾動後標題被導覽列蓋住 */
+  scroll-padding-top: 80px; 
 }
